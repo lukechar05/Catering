@@ -1,0 +1,21 @@
+<!-- ALL THIS FILE DOES IS CHOOSE OWNER, CUSTOMER, STAFF FOR LOGGING IN PURPOSES -->
+<h1>Welcome </h1>
+
+<form action="{{ url_for('continueAs', whoYouAre = 'staff') }}" method = "get">
+    <dd><input type="submit" value = "Continue as Staff"></dd>
+</form>
+
+<form action="{{ url_for('continueAs', whoYouAre = 'owner') }}" method = "get">
+    <dd><input type="submit" value = "Continue as Owner"></dd>
+</form>
+
+<form action="{{ url_for('continueAs', whoYouAre = 'customer') }}" method = "get">
+    <dd><input type="submit" value = "Continue as Customer"></dd>
+</form>
+
+<form action="{{ url_for('continueAs', whoYouAre = 'signup') }}" method = "get">
+    <dd><input type="submit" value = "Sign up as a new Customer"></dd>
+</form>
+
+
+

@@ -1,0 +1,11 @@
+<h2> Welcome new Customer</h2>
+<p class="error"><strong>Error:</strong> 
+<form action="{{ url_for('signupCustomer') }}" method="post">
+  <dl>
+    <dt>Username:
+    <input type="text" name="cUsername">
+    <dt>Password:
+    <input type="password" name="cPassword">
+    <input type="submit" value="Sign up">
+  </dl>
+</form>

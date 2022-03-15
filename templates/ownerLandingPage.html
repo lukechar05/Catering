@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Owner Landing Page</title>
+
+    </head>
+
+
+    <body>
+        
+        <h1>Welcome Owner </h1>
+
+        <form action="{{ url_for('createStaffOrLogout', functionality = 'createStaff') }}">
+            <input type="submit" value="Onboard a new Staff Member">
+        </form>
+
+        <form action="{{ url_for('createStaffOrLogout', functionality = 'Logout') }}">
+            <input type="submit" value="Logout">
+        </form>
+
+
+    </body>
+
+</html>

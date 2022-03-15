@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create Event</title>
+
+    </head>
+
+
+    <body>
+        
+        <h1>Hi customer, create your event </h1>
+
+        <form action="{{ url_for('createEvent') }}" method = "post">
+            <dl> 
+                <dt>Event name:
+                <input type="text" name="eventName">
+
+                <dt>Event date:
+                <input type="text" name="eventDate">
+
+                <input type="submit" value="Create Event">
+            </dl>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,11 @@
+<h2>Login Owner</h2>
+<p class="error"><strong>Error:</strong> 
+<form action="{{ url_for('loginOwner') }}" method="post">
+  <dl>
+    <dt>Username:
+    <input type="text" name="username">
+    <dt>Password:
+    <input type="password" name="password">
+    <input type="submit" value="Login">
+  </dl>
+</form>
