@@ -1,0 +1,76 @@
+h1 { 
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10%;
+    margin-top: 1%;
+  
+}
+table { 
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    background-color: none;
+    color: white;
+    margin-top: 5%;
+}
+
+td { 
+    border: 2px solid lightskyblue;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    color: white;
+
+}
+
+.labels { 
+    font-weight: bold;
+    font-size: larger;
+}
+
+.cancel { 
+    background-color: red;
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.create { 
+    
+    background-color: lightseagreen;
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+
+}
+
+#mySchedule { 
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+#logout { 
+    float: right;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 15px;
+    height: 60px;
+    width: 150px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    margin-right: 5%;
+}

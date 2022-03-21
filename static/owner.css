@@ -1,0 +1,88 @@
+.logout { 
+    float: right;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 15px;
+    height: 60px;
+    width: 150px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+
+ul { 
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 5%;
+    color: white;
+}
+li { 
+    float: left;
+    padding-right: 2%;
+}
+
+#createEvent { 
+    font-size: 22px;
+    color: white;
+    margin-top: 10%;
+}
+
+.create { 
+    color: white;
+    background-color: lightseagreen;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 3.5%;
+}
+
+#scheduledEvents { 
+    font-size: 28px;
+    font-weight: bolder;
+    margin-left: 5%;
+    color: white;
+    margin-top: 10%;
+}
+
+table { 
+    width: 80%;
+    height: 40%;
+    margin: auto;
+    background-color: none;
+    color: white;
+    margin-top: 5%;
+}
+
+td { 
+    border: 2px solid lightskyblue;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    color: white;
+
+}
+
+#noEvents { 
+    color: red;
+    margin-left: 40%;
+    margin-top: 20%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#labels { 
+    font-weight: bold;
+    font-size: larger;
+}
+
+#noOne { 
+    color: red;
+}

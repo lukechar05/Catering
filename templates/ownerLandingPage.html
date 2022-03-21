@@ -1,27 +1,68 @@
 <!DOCTYPE html>
 
     <head>
-
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='owner.css') }}">
         <title>Owner Landing Page</title>
-
     </head>
 
-
     <body>
-        
-        <h1>Welcome Owner </h1>
 
-        <form action="{{ url_for('createStaffOrLogout', functionality = 'createStaff') }}">
-            <input type="submit" value="Onboard a new Staff Member">
-        </form>
-
-        <form action="{{ url_for('createStaffOrLogout', functionality = 'Logout') }}">
-            <input type="submit" value="Logout">
+        <form action="{{ url_for('ownerLandingPage', functionality = 'Logout') }}" method = "get">
+            <input class = "logout" type="submit" value="Logout">
         </form>
 
 
+        <ul>
+            <li> 
+                <p id = "createEvent"> Onboard new staff member:</p> 
+            </li>
+
+            <li> 
+                <form action="{{ url_for('ownerLandingPage', functionality = 'createStaff') }}" method = "get">
+                    <input class = "create" type="submit" value="Create Staff Credentials">
+                </form> 
+             </li>  
+        </ul>
+    
+        <h1 id = "scheduledEvents">Scheduled Events: </h1>
+
+
+        {%if events is defined and events|length%}
+
+            <table>
+                <tr id = "labels">
+                    <td>Event Name</td>
+                    <td>Event Date</td>
+                    <td>Who Is Working</td>
+                </tr>
+            {%for event in events%}
+
+                {% set workers = event.workers%}
+
+                <tr>
+                    <td> {{event.name}} </td>
+                    <td> {{event.date}} </td>
+                   
+                    {% if workers[0] %}
+                        <td> 
+                            {% for staff in workers %}
+                                {{staff.username}}
+                            {%endfor%}
+                        </td>   
+                       
+                    {%else%}
+                        <td id = "noOne"> No staff signed up for this event </td>
+                    {%endif%}
+                     
+                </tr>     
+            {%endfor%}
+            </table>
+
+        {%else%}
+            <h2 id = "noEvents"> No Events Currently</h2>
+        {%endif%}
     </body>
-
 </html>

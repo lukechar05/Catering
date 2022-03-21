@@ -10,15 +10,16 @@ Name: Luke Charlesworth
 
 Lecture section: Monday Wednesday 3-4:15 
 
-Recitation day and time:  
+Recitation day and time: Friday 3 - 3:50 
 
-Assignment #:  
+Assignment #: 2
 
-Program due date:  
+Program due date:  3/22/22
 
-Handed in date:  
+Handed in date:  3/21/22
 
-Source code file name(s):
+Source code file name(s): create_event.html, create_staff.html, customerLandingPage.html, login.html, loginCustomer.html, loginStaff.html, ownerLandingPage.html, signupCustomer.html, staffLandingPage.html,
+catering.py, models.py, owner.css, customer.css, onboard.css, loginAs.css, style.css, 
 
 
 
@@ -27,6 +28,7 @@ Source code file name(s):
 
 
 Other file name(s) (if relevant):
+customer.png, owner.png, staff.png
 
 
 
@@ -34,7 +36,7 @@ Other file name(s) (if relevant):
 
 
 
-Does your project run without error?:
+Does your project run without error?: Yes
 
 If not, what is/are the error(s) and which parts of your program run
 correctly?:
@@ -45,7 +47,7 @@ correctly?:
 
 
 
-Additional comments to the grader:
+Additional comments to the grader: Fun Project!
 
 
 

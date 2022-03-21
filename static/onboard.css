@@ -1,0 +1,77 @@
+
+h1 { 
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10%;
+    margin-top: 2%;
+  
+}
+
+#horizontalListLogin { 
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 15%;
+   
+      
+}
+li { 
+    float: left;
+    padding-right: 4%;
+    
+}
+
+.userTypeImage { 
+    width: 375px;
+    height: 250px;
+    border: 1px solid white;
+    border-radius: 10px;
+    
+    
+}
+
+.loginButton { 
+    color: white;
+    background-color: lightseagreen;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 18px;
+    width: 250px;
+    height: 80px;
+    border: none;
+    border-radius: 15px;
+    margin-top: 15%;
+    margin-left: 17%;
+}
+
+
+
+#signupButton { 
+    color: white;
+    background-color: lightskyblue;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 42%;
+    margin-top: 5%;
+}
+
+#signupButton:hover { 
+
+    border: 3px solid white;
+    width: 325px;
+    height: 110px;
+
+}
+
+
+
+

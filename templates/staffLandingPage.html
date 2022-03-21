@@ -4,17 +4,71 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='staff.css') }}">
         <title>Staff Landing Page</title>
 
     </head>
 
 
     <body>
+
+        <form action="{{ url_for('staffFunctions', what = 'logout', eventID = 0) }}" method = "post">
+            <input id = "logout" type="submit" value = "Logout"></dd>
+        </form>
         
-        <h1>Welcome Staff Members</h1>
+        <h1>All Events</h1>
 
-       <!-- Here are the events we have for this week -->
 
+        <table>
+            
+            <tr class = "labels">
+                <td>Event Name</td>
+                <td>Event Date</td>
+                <td>Sign Up To Work</td>
+            </tr>
+        {% for event in availableEvents %}
+
+        <tr>
+            <td>{{event.name}}</td>
+            <td>{{event.date}} </td>
+       
+
+            <td>
+                <form action="{{ url_for('staffFunctions', what = 'add', eventID = event.id) }}" method = "post">
+                    <input class = "create" type="submit" value = "Work"></dd>
+                </form>
+            </td>
+        </tr>
+           
+        {% endfor %}
+        </table>
+
+        <h1 id = "mySchedule"> My schedule</h1>
+
+        <table> 
+            <tr class = "labels">
+                <td>Event Name</td>
+                <td>Event Date</td>
+                <td>Drop Shift</td>
+            </tr>
+        {% for event in myEvents %}
+
+            <tr>
+                <td> {{event.name}} </td>
+                <td> {{event.date}} </td> 
+
+            <td>
+                    <form action="{{ url_for('staffFunctions', what = 'remove', eventID = event.id) }}" method = "post">
+                        <input class = "cancel" type="submit" value = "Remove"></dd>
+                    </form>
+            </td>
+
+            </tr>
+            
+        {% endfor %}
+
+         </table>
+            
     </body>
-
 </html>

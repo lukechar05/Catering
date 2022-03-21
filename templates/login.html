@@ -1,21 +1,69 @@
 <!-- ALL THIS FILE DOES IS CHOOSE OWNER, CUSTOMER, STAFF FOR LOGGING IN PURPOSES -->
-<h1>Welcome </h1>
+<!DOCTYPE html>
 
-<form action="{{ url_for('continueAs', whoYouAre = 'staff') }}" method = "get">
-    <dd><input type="submit" value = "Continue as Staff"></dd>
-</form>
+    <head>
 
-<form action="{{ url_for('continueAs', whoYouAre = 'owner') }}" method = "get">
-    <dd><input type="submit" value = "Continue as Owner"></dd>
-</form>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='onboard.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <title>Login</title>
 
-<form action="{{ url_for('continueAs', whoYouAre = 'customer') }}" method = "get">
-    <dd><input type="submit" value = "Continue as Customer"></dd>
-</form>
+    </head>
+    <body>
+    
 
-<form action="{{ url_for('continueAs', whoYouAre = 'signup') }}" method = "get">
-    <dd><input type="submit" value = "Sign up as a new Customer"></dd>
-</form>
+        <div>
+            <h1>Welcome To Catering Services</h1>
+        </div>
+       
+
+        <!-- List to login as a staff, owner, or customer -->
+        <ul id = "horizontalListLogin">
+            <li>
+                <img class = "userTypeImage" src="/static/staff.png" alt="">
+                <form action="{{ url_for('continueAs', whoYouAre = 'staff') }}" method = "get">
+                    <input class = "loginButton" type="submit" value = "Continue as Staff">
+                </form>
+            </li>
+            <li>
+                <img class = "userTypeImage" src="/static/owner.png" alt="">
+                <form action="{{ url_for('continueAs', whoYouAre = 'owner') }}" method = "get">
+                    <input class = "loginButton" type="submit" value = "Continue as Owner">
+                </form>
+            </li>
+            <li>
+                <img class = "userTypeImage" src="/static/customer.png" alt="">
+                <form action="{{ url_for('continueAs', whoYouAre = 'customer') }}" method = "get">
+                    <input class = "loginButton" type="submit" value = "Continue as Customer">
+                </form>
+            </li>
+
+        </ul>
+
+        
+        <form action="{{ url_for('continueAs', whoYouAre = 'signup') }}" method = "get">
+            <input id = "signupButton" type="submit" value = "New Customer?">
+        </form>
+
+    </body>
+
+    <script>
+        
+        var signUp = document.getElementById("signupButton")
+        var otherValue = document.getElementById('signupButton').value;
+
+        signUp.onmouseover = function() { 
+            signUp.value = "Sign Up"
+        }
+        signUp.onmouseout = function() { 
+            signUp.value = otherValue
+        }
+
+
+    </script>
+   
+</html>
 
 
 

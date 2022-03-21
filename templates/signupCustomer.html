@@ -1,11 +1,37 @@
-<h2> Welcome new Customer</h2>
-<p class="error"><strong>Error:</strong> 
-<form action="{{ url_for('signupCustomer') }}" method="post">
-  <dl>
-    <dt>Username:
-    <input type="text" name="cUsername">
-    <dt>Password:
-    <input type="password" name="cPassword">
-    <input type="submit" value="Sign up">
-  </dl>
-</form>
+<!DOCTYPE html>
+
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loginAs.css') }}">
+    <title>Signup As Customer</title>
+
+  </head>
+
+  <body>
+
+      <h1>Hi New Customer!</h1>
+
+      <form action="{{ url_for('signupCustomer') }}" method="post">
+
+         
+      <ul>
+        <li>
+          <input class = "typing" type="text" name="cUsername">
+          <h2 class = "userPass">Username </h2>
+        </li>
+        <li>
+          <input class = "typing" type="password" name="cPassword">
+          <h2 class = "userPass">Password</h2>
+
+        </li>
+      </ul>
+
+      <input class = "submit" type="submit" value="Sign Up">
+    </form>
+
+  </body>
+  
+</html>

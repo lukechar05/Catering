@@ -1,11 +1,38 @@
-<h2>Login Staff</h2>
-<p class="error"><strong>Error:</strong> 
-<form action="{{ url_for('loginStaff') }}" method="post">
-  <dl>
-    <dt>Username:
-    <dd><input type="text" name="sUsername">
-    <dt>Password:
-    <dd><input type="password" name="sPassword">
-    <dd><input type="submit" value="Login">
-  </dl>
-</form>
+<!DOCTYPE html>
+
+  <head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loginAs.css') }}">
+
+    <title>Login As Staff</title>
+  </head>
+
+  <body>
+
+      <h1>Welcome Back Staff Member!</h1>
+
+      <form action="{{ url_for('loginStaff') }}" method="post">
+
+         
+      <ul>
+        <li>
+          <input class = "typing" type="text" name="sUsername">
+          <h2 class = "userPass">Username </h2>
+        </li>
+        <li>
+          <input class = "typing" type="password" name="sPassword">
+          <h2 class = "userPass">Password</h2>
+
+        </li>
+      </ul>
+
+      <input class = "submit" type="submit" value="Login">
+    </form>
+    
+  </body>
+
+</html>

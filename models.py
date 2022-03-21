@@ -1,3 +1,4 @@
+from itertools import count
 from re import S
 from flask_sqlalchemy import SQLAlchemy
 
@@ -6,18 +7,18 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 
-staff_event = db.Table('staff_event', 
+events = db.Table('events', 
     db.Column('staff_id', db.Integer, db.ForeignKey('staff.id')),
     db.Column('event_id', db.Integer, db.ForeignKey('event.id'))
 )
+
  
 class Staff(db.Model): 
     id = db.Column(db.Integer, primary_key = True)
     username = db.Column(db.Text, nullable = False)
     password = db.Column(db.Text, nullable = False)
 
-
-    events = db.relationship('Event', secondary=staff_event, backref='workers')
+    myEvents = db.relationship('Event', secondary='events', primaryjoin='Staff.id==events.c.staff_id', secondaryjoin='Event.id==events.c.event_id', backref=db.backref('workers', lazy='dynamic'),lazy = 'dynamic')
 
     def __init__(self, username, password):
         self.username = username
@@ -33,7 +34,7 @@ class Customer(db.Model):
     username = db.Column(db.Text, nullable = False)
     password = db.Column(db.Text, nullable = False)
 
-    events = db.relationship('Event', backref = 'customer')
+    events = db.relationship('Event', backref = 'customers')
 
     def __init__(self, username, password):
         self.username = username
@@ -43,18 +44,19 @@ class Customer(db.Model):
         return '<Customer{}>'.format(self.id)
 
 
-
 class Event(db.Model): 
     id = db.Column(db.Integer, primary_key = True)
     name = db.Column(db.Text, nullable = False)
     date = db.Column(db.Text, nullable = False)
+    counter = db.Column(db.Integer, nullable = False)
     customer_id = db.Column(db.Integer, db.ForeignKey('customer.id'), nullable = False)
-
  
-    def __init__(self, name, date, customer_id):
+    def __init__(self, name, date, customer_id, counter):
         self.name = name
         self.date = date
+        self.counter = counter
         self.customer_id = customer_id
+        
         
     
     def __repr__(self):

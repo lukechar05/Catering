@@ -4,25 +4,37 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='loginAs.css') }}">
         <title>Create Event</title>
 
     </head>
 
 
     <body>
-        
-        <h1>Hi customer, create your event </h1>
-
-        <form action="{{ url_for('createEvent') }}" method = "post">
-            <dl> 
-                <dt>Event name:
-                <input type="text" name="eventName">
-
-                <dt>Event date:
-                <input type="text" name="eventDate">
-
-                <input type="submit" value="Create Event">
-            </dl>
+        <form action="{{ url_for('createEvent', what = 'logout') }}" method = "post">
+            <input class = "logout" type="submit" value="Logout">
         </form>
+        
+        <h1>Create Event </h1>
+
+        <form action="{{ url_for('createEvent', what = 'no') }}" method = "post">
+           <ul>
+                <li>
+                    <input class = "typing" type="text" name="eventName">
+                    <h2 class = "userPass">Event Name</h2>
+                </li>
+                    <input class = "typing" type="date" name="eventDate">
+                    <h2 id = "eventDate">Event Date</h2>
+                <li>
+
+                </li>
+           </ul> 
+            <input class = "submit" type="submit" value="Create Event">
+        </form>
+
+        {%if error != None%}
+            <p> {{error}} </p>
+        {%endif%}
     </body>
 </html>

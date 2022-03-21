@@ -1,0 +1,107 @@
+h1 { 
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10%;
+    margin-top: 2%;
+  
+}
+ul { 
+    margin: auto;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 30%;
+}
+li { 
+    float: left;
+    padding-right: 4%;
+}
+
+
+dt { 
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: underline;
+}
+.userPass { 
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.typing { 
+    background-color: ghostwhite;
+    border: none;
+    color: #1a1a1a;
+    height: 80px;
+    width: 300px;
+    font-size: 24px;
+    border-radius: 15px;
+    padding-right: 5px;
+    border: 2px solid #1a1a1a;
+    
+}
+
+.typing:focus { 
+   outline: none;
+}
+.typing:hover { 
+    border: 2px solid lightseagreen;
+}
+.typing:active { 
+    border: 2px solid lightseagreen;
+}
+
+.submit { 
+    color: white;
+    background-color: lightskyblue;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+    width: 300px;
+    height: 100px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 42%;
+    margin-top: 5%;
+}
+.logout { 
+    float: right;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 15px;
+    height: 60px;
+    width: 150px;
+    color: white;
+    font-weight: bolder;
+    border: none;
+    margin-right: 5%;
+   
+}
+
+#eventDate { 
+    font-size: 24px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    margin-right: 60%;
+}
+
+p { 
+    margin-top: 5%;
+    color: red;
+    margin-left: 32%;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+
+
+
