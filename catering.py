@@ -27,13 +27,13 @@ db.init_app(app)
 # App movement and base functionality
 
 
-@app.before_request
-def before_request():
-	g.user = None
-	if 'staff.id' in session:
-		g.user = Staff.query.filter_by(id=session['staff_id']).first()
-	else: 
-		g.user = Customer.query.filter_by(id=session['customer_id']).first()
+# @app.before_request
+# def before_request():
+# 	g.user = None
+# 	if 'staff.id' in session:
+# 		g.user = Staff.query.filter_by(id=session['staff_id']).first()
+# 	else: 
+# 		g.user = Customer.query.filter_by(id=session['customer_id']).first()
 
 
 # Initializes database
